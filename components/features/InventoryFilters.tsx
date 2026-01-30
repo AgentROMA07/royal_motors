@@ -7,7 +7,6 @@ import { Input } from '@/components/ui/Input';
 import { Label } from '@/components/ui/Label';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { adminDictionary } from '@/lib/admin-dictionary';
 import type { Locale } from '@/lib/i18n';
 import { getAttributes, Attribute } from '@/actions/attributes';
 
@@ -34,7 +33,6 @@ interface InventoryFiltersProps {
 }
 
 export function InventoryFilters({ cars, locale, onFilterChange, className }: InventoryFiltersProps) {
-  const dict = adminDictionary[locale].form;
   const [attributes, setAttributes] = useState<Attribute[]>([]);
 
   useEffect(() => {

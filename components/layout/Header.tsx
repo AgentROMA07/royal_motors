@@ -6,8 +6,6 @@ import { MobileNav } from './MobileNav';
 import { getBrandConfig } from '@/lib/brand';
 import { Locale } from '@/lib/i18n';
 import { Phone } from 'lucide-react';
-import fs from 'fs';
-import path from 'path';
 
 interface HeaderProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -19,17 +17,6 @@ export function Header({ dictionary, locale }: HeaderProps) {
   const brand = getBrandConfig();
   const nav = dictionary.nav;
   
-  // Read logo SVG
-  let logoSvg = '';
-  try {
-    const logoPath = path.join(process.cwd(), 'brand/assets/logo.svg');
-    if (fs.existsSync(logoPath)) {
-      logoSvg = fs.readFileSync(logoPath, 'utf-8');
-    }
-  } catch {
-    // Ignore error
-  }
-
   const links = [
     { href: locale === 'ru' ? '/ru' : '/', label: nav.home },
     { href: locale === 'ru' ? '/ru/inventory' : '/inventory', label: nav.cars },

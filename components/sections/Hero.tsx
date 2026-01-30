@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 import { Locale } from '@/lib/i18n';
-import { Car, CreditCard, RefreshCcw, ShieldCheck, ArrowRight, MessageCircle } from 'lucide-react';
+import { CreditCard, RefreshCcw, ShieldCheck, MessageCircle, ArrowRight } from 'lucide-react';
 
 interface HeroProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -89,6 +89,7 @@ export function Hero({ dictionary, locale }: HeroProps) {
                     src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?q=80&w=1000&auto=format&fit=crop"
                     alt="Premium Car"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#16161A] via-transparent to-transparent opacity-90" />

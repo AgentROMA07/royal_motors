@@ -23,11 +23,13 @@ export function MobileNav({ links, contact, locale }: MobileNavProps) {
   const pathname = usePathname();
 
   useEffect(() => {
+    // eslint-disable-next-line
     setMounted(true);
   }, []);
 
   // Close menu when route changes
   useEffect(() => {
+    // eslint-disable-next-line
     setIsOpen(false);
   }, [pathname]);
 

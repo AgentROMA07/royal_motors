@@ -1,8 +1,6 @@
 import { Container } from '@/components/ui/Container';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { Button } from '@/components/ui/Button';
-import { Car, RefreshCw, Banknote, Percent, FileCheck, ArrowRight } from 'lucide-react';
-import Link from 'next/link';
+import { Car, RefreshCw, Banknote, Percent, FileCheck } from 'lucide-react';
 
 interface ServicesSectionProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

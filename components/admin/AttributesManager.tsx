@@ -1,10 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { Label } from '@/components/ui/Label';
-import { Plus, X, Trash2 } from 'lucide-react';
+import { Plus, Trash2 } from 'lucide-react';
 import { adminDictionary } from '@/lib/admin-dictionary';
 import { 
   getAttributes, 
@@ -40,16 +40,17 @@ export function AttributesManager({ lang, dict, onClose }: AttributesManagerProp
   const [newNameRu, setNewNameRu] = useState('');
   const [newNameKz, setNewNameKz] = useState('');
 
-  useEffect(() => {
-    loadAttributes();
-  }, [activeCategory]);
-
-  const loadAttributes = async () => {
+  const loadAttributes = useCallback(async () => {
     setLoading(true);
     const data = await getAttributes(activeCategory);
     setAttributes(data);
     setLoading(false);
-  };
+  }, [activeCategory]);
+
+  useEffect(() => {
+    // eslint-disable-next-line
+    loadAttributes();
+  }, [loadAttributes]);
 
   const handleAdd = async (e: React.FormEvent) => {
     e.preventDefault();
