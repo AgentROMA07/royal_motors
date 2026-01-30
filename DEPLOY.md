@@ -1,21 +1,16 @@
 # Инструкция по публикации сайта (Бесплатно)
 
 ## Шаг 1: Загрузка кода на GitHub
-Ваш проект уже готов к отправке. Вам нужно только создать хранилище (репозиторий).
 
-1. Зайдите на [GitHub.com](https://github.com) и войдите в свой аккаунт.
-2. Нажмите кнопку **New** (или **Create repository**).
-3. Введите название (например, `luxury-motors`).
-4. Выберите **Private** (Приватный).
-5. Нажмите **Create repository**.
-6. Скопируйте команды из блока **"…or push an existing repository from the command line"**.
-   Они выглядят примерно так:
-   ```bash
-   git remote add origin https://github.com/ВАШ_НИК/luxury-motors.git
-   git branch -M master
-   git push -u origin master
-   ```
-7. Вставьте эти команды в терминал здесь (в Trae) и нажмите Enter.
+(Выполнено! Ваш код уже загружен в репозиторий `royal_motors`)
+
+Если вам нужно будет обновить код в будущем, используйте эти команды:
+
+```bash
+git add .
+git commit -m "Обновление"
+git push
+```
 
 ## Шаг 2: Публикация на Vercel
 1. Зайдите на [Vercel.com](https://vercel.com) и войдите через GitHub.
